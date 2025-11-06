@@ -62,14 +62,14 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-            <div className="max-w-xl">
+            <div className="max-w-xl bg-black/20 p-8 rounded-lg">
                 <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight">
                 Our Luxury Collections
                 </h1>
                 <p className="mt-4 text-lg text-neutral-200">
                     Discover exquisite designs and high-quality craftsmanship. Book a consultation via WhatsApp today.
                 </p>
-                <Button asChild variant="outline" size="lg" className="mt-6 bg-transparent hover:bg-white hover:text-black border-white text-white">
+                <Button asChild size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90">
                   <Link href="/shop">View Collection</Link>
                 </Button>
             </div>
