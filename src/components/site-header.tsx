@@ -20,6 +20,11 @@ const navLinks = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   
   const NavLink = ({ href, label, className }: { href: string; label: string; className?: string }) => {
     const isActive = pathname === href;
@@ -52,28 +57,30 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <div className="md:hidden">
-            <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="bg-background text-foreground">
-                <SheetHeader>
-                  <SheetTitle className="sr-only">Main Menu</SheetTitle>
-                </SheetHeader>
-                <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                  <Gem className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline text-lg text-foreground">Shimmer</span>
-                </Link>
-                <nav className="flex flex-col gap-6">
-                  {navLinks.map((link) => (
-                    <NavLink key={link.href} {...link} className="text-foreground/80 hover:text-primary"/>
-                  ))}
-                </nav>
-              </SheetContent>
-            </Sheet>
+            {isMounted && (
+              <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="bg-background text-foreground">
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Main Menu</SheetTitle>
+                  </SheetHeader>
+                  <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
+                    <Gem className="h-6 w-6 text-primary" />
+                    <span className="font-bold font-headline text-lg text-foreground">Shimmer</span>
+                  </Link>
+                  <nav className="flex flex-col gap-6">
+                    {navLinks.map((link) => (
+                      <NavLink key={link.href} {...link} className="text-foreground/80 hover:text-primary"/>
+                    ))}
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            )}
           </div>
         </div>
       </div>
