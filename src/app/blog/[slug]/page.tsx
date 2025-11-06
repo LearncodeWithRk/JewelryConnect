@@ -2,8 +2,10 @@ import { blogPosts } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, User } from 'lucide-react';
+import { Calendar, User, ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 type Props = {
   params: { slug: string };
@@ -37,6 +39,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <article className="bg-background">
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="max-w-3xl mx-auto">
+          <Button asChild variant="outline" className="mb-8 group">
+            <Link href="/blog">
+              <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              All Posts
+            </Link>
+          </Button>
           <header className="mb-8">
             <h1 className="font-headline text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">

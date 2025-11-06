@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Sparkles, Gem, ShieldCheck, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { BackButton } from '@/components/back-button';
 
 export const metadata: Metadata = {
   title: 'Book a Consultation | JewelryConnect',
@@ -32,6 +33,7 @@ export default function BookingPage() {
   return (
     <div className="bg-secondary">
       <div className="container mx-auto px-4 py-16 lg:py-24">
+        <BackButton />
         <div className="text-center mb-12">
           <h1 className="font-headline text-5xl md:text-6xl font-bold">Book a Consultation</h1>
           <p className="mt-2 text-lg text-muted-foreground">
