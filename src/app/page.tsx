@@ -72,9 +72,6 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center gap-4">
               <WhatsappBookingForm />
-               <Button asChild variant="outline" className="w-full bg-white/10 border-neutral-400 hover:bg-white/20 hover:text-white backdrop-blur-md">
-                <Link href="/shop">View Collection</Link>
-              </Button>
             </div>
         </div>
       </section>
