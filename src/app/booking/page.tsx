@@ -56,16 +56,8 @@ export default function BookingPage() {
             ))}
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="bg-background p-6 rounded-lg shadow-xl border">
-                <h2 className="font-headline text-3xl mb-4">Start a Conversation</h2>
-                <p className="text-muted-foreground mb-6">
-                    Use our AI-powered chat to ask questions or start the booking process. For complex requests, you'll be connected with me directly.
-                </p>
-                <ChatInterface />
-            </div>
-
-            <div className="bg-background p-8 rounded-lg shadow-xl border text-center">
+        <div className="grid lg:grid-cols-1 gap-12 items-start">
+            <div className="bg-background p-8 rounded-lg shadow-xl border text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-3xl mb-4">Prefer a Direct Chat?</h2>
                 <p className="text-muted-foreground mb-6">
                     Click the button below to open a conversation directly in WhatsApp. I'll get back to you as soon as possible to arrange your consultation.
