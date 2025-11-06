@@ -75,9 +75,6 @@ export function SiteHeader() {
               </SheetContent>
             </Sheet>
           </div>
-          <Button asChild className="hidden md:flex rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
         </div>
       </div>
     </header>
