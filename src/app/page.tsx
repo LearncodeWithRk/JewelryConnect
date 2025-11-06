@@ -37,6 +37,14 @@ export default function Home() {
   const typeNecklaceImage = PlaceHolderImages.find(img => img.id === 'type-necklace');
   const typeBraceletImage = PlaceHolderImages.find(img => img.id === 'type-bracelet');
 
+  const brandLogos = [
+    { name: 'VOGUE' },
+    { name: 'GLAMOUR' },
+    { name: 'ELLE' },
+    { name: 'BAZAAR' },
+    { name: 'InStyle' },
+  ];
+
   return (
     <div className="flex flex-col bg-background text-foreground">
       {/* Hero Section */}
@@ -226,14 +234,14 @@ export default function Home() {
       </section>
 
        {/* Logo Cloud */}
-      <section className="py-12 bg-secondary">
+       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="flex justify-around items-center flex-wrap gap-8">
-            <Gem className="h-8 w-24 text-muted-foreground" />
-            <Gem className="h-8 w-24 text-muted-foreground" />
-            <Gem className="h-8 w-24 text-muted-foreground" />
-            <Gem className="h-8 w-24 text-muted-foreground" />
-            <Gem className="h-8 w-24 text-muted-foreground" />
+            {brandLogos.map((logo) => (
+              <div key={logo.name} className="text-center">
+                <p className="text-2xl font-bold text-muted-foreground tracking-widest">{logo.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
