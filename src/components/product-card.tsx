@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Product } from '@/lib/data';
-import { ShoppingCart, MessageSquare } from 'lucide-react';
+import { ShoppingCart, MessageSquare, CalendarPlus } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 
@@ -59,6 +59,11 @@ export function ProductCard({ product }: ProductCardProps) {
             <Button variant="secondary" size="icon" onClick={handleWhatsAppInquiry} aria-label={`Inquire about ${product.name} on WhatsApp`} className="h-8 w-8 bg-green-500 hover:bg-green-600 text-white">
                 <MessageSquare className="h-4 w-4" />
             </Button>
+            <Link href="/booking" passHref>
+              <Button variant="secondary" size="icon" aria-label={`Book consultation for ${product.name}`} className="h-8 w-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <CalendarPlus className="h-4 w-4" />
+              </Button>
+            </Link>
            </div>
         </div>
         <CardContent className="p-4">
