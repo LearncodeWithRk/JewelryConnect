@@ -46,7 +46,7 @@ const determineConsultationType = ai.defineTool({
     'generalInquiry',
     'unknown',
   ]),
-  async (input) => {
+  fn: async (input) => {
     // Basic implementation, can be expanded with more sophisticated logic
     const message = input.message.toLowerCase();
     if (message.includes('styling') || message.includes('style')) {

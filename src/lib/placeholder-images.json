@@ -1,15 +1,15 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-banner",
-      "description": "Elegant jewelry on a model",
-      "imageUrl": "https://images.unsplash.com/photo-1590166223826-12dee1677420?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxqZXdlbHJ5JTIwbW9kZWx8ZW58MHx8fHwxNzYyNDAyNjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "hero-banner-new",
+      "description": "Woman with elegant earrings and rings looking over her shoulder.",
+      "imageUrl": "https://images.unsplash.com/photo-1652766540048-de0a878a3266?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxqZXdlbHJ5JTIwbW9kZWx8ZW58MHx8fHwxNzYyNDAyNjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "jewelry model"
     },
     {
       "id": "about-influencer",
       "description": "Portrait of the jewelry influencer",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjMzOTU2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjMzOTU2MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
@@ -21,86 +21,140 @@
     {
       "id": "avatar-2",
       "description": "Avatar for testimonial 2",
-      "imageUrl": "https://images.unsplash.com/photo-1635131902146-6957477a4ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2MjQwNTcyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwc21pbGluZ3xlbnwwfHx8fDE3NjI0MDU3MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person smiling"
     },
     {
       "id": "avatar-3",
       "description": "Avatar for testimonial 3",
-      "imageUrl": "https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW4lMjBmYWNlfGVufDB8fHx8MTc2MjM3Njc2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1650630729397-810915b32ac9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBmYWNlfGVufDB8fHx8MTc2MjM3Njc2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man face"
     },
     {
       "id": "product-1",
       "description": "Golden necklace with a pendant",
-      "imageUrl": "https://images.unsplash.com/photo-1705326454924-f6777522b030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb2xkJTIwbmVja2xhY2V8ZW58MHx8fHwxNzYyMzE3NDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600862754152-80a263dd564f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwbmVja2xhY2V8ZW58MHx8fHwxNzYyMzE3NDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gold necklace"
     },
     {
       "id": "product-2",
       "description": "Silver earrings with diamonds",
-      "imageUrl": "https://images.unsplash.com/photo-1636103811402-f10d43b62237?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaWx2ZXIlMjBlYXJyaW5nc3xlbnwwfHx8fDE3NjIzMTQxMTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1716461534906-d31a17008801?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzaWx2ZXIlMjBlYXJyaW5nc3xlbnwwfHx8fDE3NjIzMTQxMTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "silver earrings"
     },
     {
       "id": "product-3",
       "description": "Elegant pearl bracelet",
-      "imageUrl": "https://images.unsplash.com/photo-1703034390461-0b978d9bd21d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZWFybCUyMGJyYWNlbGV0fGVufDB8fHx8MTc2MjMzMTg1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1704957205327-9fbd44d683b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZWFybCUyMGJyYWNlbGV0fGVufDB8fHx8MTc2MjMzMTg1NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pearl bracelet"
     },
     {
       "id": "product-4",
       "description": "Rose gold ring with a sapphire",
-      "imageUrl": "https://images.unsplash.com/photo-1683245597322-79659ee86fb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb3NlJTIwZ29sZCUyMHJpbmd8ZW58MHx8fHwxNzYyMzQxMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1549048799-bf3b582ee17b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyb3NlJTIwZ29sZCUyMHJpbmd8ZW58MHx8fHwxNzYyMzQxMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "rose gold ring"
     },
     {
       "id": "product-5",
       "description": "Minimalist silver choker",
-      "imageUrl": "https://images.unsplash.com/photo-1740641960691-43ff55f1d558?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzaWx2ZXIlMjBjaG9rZXJ8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1695799321593-8bcada6c40a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzaWx2ZXIlMjBjaG9rZXJ8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "silver choker"
     },
     {
       "id": "product-6",
       "description": "Vintage style brooch",
-      "imageUrl": "https://images.unsplash.com/photo-1578357809003-7518195b69fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx2aW50YWdlJTIwYnJvb2NofGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1667013829325-be7dac7d03eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aW50YWdlJTIwYnJvb2NofGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vintage brooch"
     },
     {
       "id": "product-7",
       "description": "Bohemian beaded ankle bracelet",
-      "imageUrl": "https://images.unsplash.com/photo-1744722091259-ed1cf11ac97f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmtsZSUyMGJyYWNlbGV0fGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1726354722765-756a530fb69a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmtsZSUyMGJyYWNlbGV0fGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ankle bracelet"
     },
     {
       "id": "product-8",
       "description": "Custom engraved golden locket",
-      "imageUrl": "https://images.unsplash.com/photo-1513122991877-4a5678e6d72f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkJTIwbG9ja2V0fGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1705326455036-0fab8ecba04d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnb2xkJTIwbG9ja2V0fGVufDB8fHx8MTc2MjQyNzU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gold locket"
     },
     {
       "id": "blog-1-banner",
       "description": "Styling jewelry for different occasions",
-      "imageUrl": "https://images.unsplash.com/photo-1629490500073-b6f51cfe0d7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxqZXdlbHJ5JTIwZmxhdGxheXxlbnwwfHx8fDE3NjIzMzczNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1656103743218-4881dc27eb84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqZXdlbHJ5JTIwZmxhdGxheXxlbnwwfHx8fDE3NjIzMzczNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "jewelry flatlay"
     },
     {
       "id": "blog-2-banner",
       "description": "Guide to sustainable jewelry",
-      "imageUrl": "https://images.unsplash.com/photo-1566707675793-3ec9e5590bb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlY28lMjBmcmllbmRseXxlbnwwfHx8fDE3NjI0Mjc1Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559509546-92c9cba962f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlY28lMjBmcmllbmRseXxlbnwwfHx8fDE3NjI0Mjg0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "eco friendly"
     },
     {
       "id": "blog-3-banner",
       "description": "Caring for your precious metals",
-      "imageUrl": "https://images.unsplash.com/photo-1547336788-0531fc23e8a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb2xpc2hpbmclMjBzaWx2ZXJ8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1676496220014-43540212ef5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb2xpc2hpbmclMjBzaWx2ZXJ8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "polishing silver"
     },
     {
       "id": "blog-4-banner",
       "description": "The history of engagement rings",
-      "imageUrl": "https://images.unsplash.com/photo-1570610155223-66279ba81b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aW50YWdlJTIwcmluZ3N8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1729429442341-a6841554ab23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aW50YWdlJTIwcmluZ3N8ZW58MHx8fHwxNzYyNDI3NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vintage rings"
+    },
+    {
+      "id": "radiant-refinement",
+      "description": "Woman wearing sunglasses and gold jewelry, with her reflection visible.",
+      "imageUrl": "https://images.unsplash.com/photo-1627577279497-4b24bf1021b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzYyMzE5NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion model"
+    },
+    {
+      "id": "radiant-refinement-detail",
+      "description": "Close-up of a gold ring.",
+      "imageUrl": "https://images.unsplash.com/photo-1631982690223-8aa4be0a2497?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnb2xkJTIwcmluZ3xlbnwwfHx8fDE3NjIzNjMyNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold ring"
+    },
+    {
+      "id": "collection-earring",
+      "description": "Close up of gold earring on an ear.",
+      "imageUrl": "https://images.unsplash.com/photo-1761479250421-a645c2fa046e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnb2xkJTIwZWFycmluZ3xlbnwwfHx8fDE3NjI0MDg4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold earring"
+    },
+    {
+      "id": "collection-ring",
+      "description": "Close up of a diamond ring.",
+      "imageUrl": "https://images.unsplash.com/photo-1512217358397-b68c2bc84682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWFtb25kJTIwcmluZ3xlbnwwfHx8fDE3NjI0MDY3NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diamond ring"
+    },
+    {
+      "id": "collection-necklace",
+      "description": "Woman wearing layered gold necklaces.",
+      "imageUrl": "https://images.unsplash.com/photo-1611583027838-515a1087afdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z29sZCUyMG5lY2tsYWNlfGVufDB8fHx8MTc2MjMxNzQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold necklace"
+    },
+    {
+      "id": "video-placeholder",
+      "description": "Hands with rings and manicured nails.",
+      "imageUrl": "https://images.unsplash.com/photo-1675113660146-43e3049dcd2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMGpld2Vscnl8ZW58MHx8fHwxNzYyNDI4NDA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hands jewelry"
+    },
+    {
+      "id": "type-ring",
+      "description": "A diamond ring.",
+      "imageUrl": "https://images.unsplash.com/photo-1529519195486-16945f0fb37f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaWFtb25kJTIwcmluZ3xlbnwwfHx8fDE3NjI0MDY3NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "diamond ring"
+    },
+    {
+      "id": "type-necklace",
+      "description": "A gold necklace.",
+      "imageUrl": "https://images.unsplash.com/photo-1611107683227-e9060eccd846?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkJTIwbmVja2xhY2V8ZW58MHx8fHwxNzYyMzE3NDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold necklace"
+    },
+    {
+      "id": "type-bracelet",
+      "description": "A gold bracelet.",
+      "imageUrl": "https://images.unsplash.com/photo-1689367436629-1d288f1e23b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnb2xkJTIwYnJhY2VsZXR8ZW58MHx8fHwxNzYyNDI0ODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold bracelet"
     }
   ]
 }

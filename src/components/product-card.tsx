@@ -4,16 +4,13 @@ import Image from 'next/image';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Product } from '@/lib/data';
 import { ShoppingCart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import Link from 'next/link';
 
 interface ProductCardProps {
   product: Product;
@@ -25,7 +22,8 @@ export function ProductCard({ product }: ProductCardProps) {
     (img) => img.id === product.imageId
   );
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
     toast({
       title: 'Added to Cart!',
       description: `${product.name} has been added to your cart.`,
@@ -33,28 +31,27 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="overflow-hidden group flex flex-col border-stone-200/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
-      <div className="aspect-square overflow-hidden relative">
-        {productImage && (
-          <Image
-            src={productImage.imageUrl}
-            alt={product.name}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            data-ai-hint={productImage.imageHint}
-          />
-        )}
-      </div>
-      <CardHeader className="flex-grow">
-        <CardTitle className="font-body text-xl">{product.name}</CardTitle>
-        <CardDescription className="text-sm pt-1">{product.description}</CardDescription>
-      </CardHeader>
-      <CardFooter className="flex justify-between items-center">
-        <p className="text-xl font-bold text-accent">${product.price.toFixed(2)}</p>
-        <Button variant="outline" size="icon" onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`}>
-          <ShoppingCart className="h-5 w-5" />
-        </Button>
-      </CardFooter>
-    </Card>
+    <Link href="#" className="group">
+      <Card className="overflow-hidden group flex flex-col border-none shadow-none bg-transparent text-center">
+        <div className="aspect-square overflow-hidden relative rounded-lg">
+          {productImage && (
+            <Image
+              src={productImage.imageUrl}
+              alt={product.name}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              data-ai-hint={productImage.imageHint}
+            />
+          )}
+           <Button variant="secondary" size="icon" onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="absolute top-2 right-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+            <ShoppingCart className="h-4 w-4" />
+          </Button>
+        </div>
+        <CardContent className="p-4">
+          <h3 className="font-semibold text-lg">{product.name}</h3>
+          <p className="text-muted-foreground">${product.price.toFixed(2)}</p>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'JewelryConnect - Your Personal Jewelry Stylist',
+  title: 'Shimmer - Your Personal Jewelry Stylist',
   description:
     'Discover unique jewelry, get personal styling advice, and book one-on-one consultations with a top jewelry influencer.',
 };
