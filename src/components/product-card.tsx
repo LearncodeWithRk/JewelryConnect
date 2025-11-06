@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Product } from '@/lib/data';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 
@@ -30,6 +30,15 @@ export function ProductCard({ product }: ProductCardProps) {
     });
   };
 
+  const handleWhatsAppInquiry = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const message = `Hello Shimmer! I have a question about the product: ${product.name}.`;
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=919599695872&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
   return (
     <Link href="#" className="group">
       <Card className="overflow-hidden group flex flex-col border-none shadow-none bg-transparent text-center">
@@ -43,9 +52,14 @@ export function ProductCard({ product }: ProductCardProps) {
               data-ai-hint={productImage.imageHint}
             />
           )}
-           <Button variant="secondary" size="icon" onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="absolute top-2 right-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
-            <ShoppingCart className="h-4 w-4" />
-          </Button>
+           <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <Button variant="secondary" size="icon" onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="h-8 w-8">
+                <ShoppingCart className="h-4 w-4" />
+            </Button>
+            <Button variant="secondary" size="icon" onClick={handleWhatsAppInquiry} aria-label={`Inquire about ${product.name} on WhatsApp`} className="h-8 w-8 bg-green-500 hover:bg-green-600 text-white">
+                <MessageSquare className="h-4 w-4" />
+            </Button>
+           </div>
         </div>
         <CardContent className="p-4">
           <h3 className="font-semibold text-lg">{product.name}</h3>
