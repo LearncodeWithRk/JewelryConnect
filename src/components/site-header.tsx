@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Gem } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -20,6 +20,12 @@ const navLinks = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const NavLink = ({ href, label, className }: { href: string; label: string; className?: string }) => {
     const isActive = pathname === href;
@@ -52,6 +58,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <div className="md:hidden">
+           {isClient && (
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -74,6 +81,7 @@ export function SiteHeader() {
                 </nav>
               </SheetContent>
             </Sheet>
+           )}
           </div>
         </div>
       </div>
