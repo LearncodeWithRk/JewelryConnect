@@ -9,6 +9,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ArrowRight, Star, ShoppingBag, Truck, Package, Award, Gem } from 'lucide-react';
 import type { Metadata } from 'next';
+import { WhatsappBookingForm } from '@/components/whatsapp-booking-form';
 
 export const metadata: Metadata = {
   title: 'Shimmer - Luxury Collections',
@@ -48,7 +49,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative h-[80vh] md:h-[90vh] w-full text-white">
+      <section className="relative h-auto md:h-[90vh] w-full text-white flex items-center justify-center py-20 md:py-0">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -59,58 +60,19 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 flex flex-col items-start justify-center h-full container mx-auto px-4">
-          <div className="max-w-xl p-8 rounded-lg bg-black/20 backdrop-blur-sm">
-            <h1 className="font-headline text-6xl md:text-8xl font-bold tracking-tight">
-              Our Luxury Collections
-            </h1>
-            <div className='flex items-center gap-4 mt-6'>
-              <Button asChild size="lg" className="rounded-full bg-card text-card-foreground hover:bg-card/90 font-bold text-lg group">
-                <Link href="/shop">
-                  Let's Get Started
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-white text-white bg-transparent hover:bg-white hover:text-black w-14 h-14 p-0">
-                  <Link href="/shop">
-                     <ArrowRight className="h-6 w-6" />
-                  </Link>
-              </Button>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-xl">
+                <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight">
+                Our Luxury Collections
+                </h1>
+                <p className="mt-4 text-lg text-neutral-200">
+                    Discover exquisite designs and high-quality craftsmanship. Book a consultation via WhatsApp today.
+                </p>
             </div>
-          </div>
-          <div className="absolute bottom-10 left-10 max-w-xs p-4 rounded-lg bg-black/20 backdrop-blur-sm">
-              <h3 className='font-bold'># Shimmer Jewelry Store</h3>
-              <p className="mt-2 text-sm text-neutral-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-              </p>
-          </div>
-          <div className='absolute bottom-10 right-10 flex gap-4'>
-            <div className="p-4 rounded-lg bg-black/20 backdrop-blur-sm flex items-center gap-4">
-                <div className='flex'>
-                  <Avatar className='-ml-2 border-2 border-white'>
-                    <AvatarImage src="https://picsum.photos/seed/avatar1/40/40" alt="user avatar" />
-                    <AvatarFallback>U1</AvatarFallback>
-                  </Avatar>
-                  <Avatar className='-ml-2 border-2 border-white'>
-                    <AvatarImage src="https://picsum.photos/seed/avatar2/40/40" alt="user avatar" />
-                    <AvatarFallback>U2</AvatarFallback>
-                  </Avatar>
-                   <Avatar className='-ml-2 border-2 border-white'>
-                    <AvatarImage src="https://picsum.photos/seed/avatar3/40/40" alt="user avatar" />
-                    <AvatarFallback>U3</AvatarFallback>
-                  </Avatar>
-                </div>
-                <div>
-                    <p className='font-bold text-lg'>230K+</p>
-                    <p className='text-sm'>Happy Clients</p>
-                </div>
+            <div>
+                <WhatsappBookingForm />
             </div>
-             <div className="p-4 rounded-lg bg-black/20 backdrop-blur-sm">
-                {radiantRefinementDetailImage && <Image src={radiantRefinementDetailImage.imageUrl} alt='jewelry detail' width={80} height={80} className='rounded-md' data-ai-hint={radiantRefinementDetailImage.imageHint} />}
-                <p className='font-bold mt-2'>Beautiful In Every Detail</p>
-                <Link href='/shop' className='text-sm flex items-center gap-1 group'>Read More <ArrowRight className='h-4 w-4 transition-transform group-hover:translate-x-1' /></Link>
-            </div>
-          </div>
         </div>
       </section>
 
