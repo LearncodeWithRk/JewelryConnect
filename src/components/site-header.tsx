@@ -20,13 +20,7 @@ const navLinks = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-
+  
   const NavLink = ({ href, label, className }: { href: string; label: string; className?: string }) => {
     const isActive = pathname === href;
     return (
@@ -58,7 +52,6 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <div className="md:hidden">
-           {isClient && (
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -81,7 +74,6 @@ export function SiteHeader() {
                 </nav>
               </SheetContent>
             </Sheet>
-           )}
           </div>
         </div>
       </div>
