@@ -69,6 +69,9 @@ export default function Home() {
                 <p className="mt-4 text-lg text-neutral-200">
                     Discover exquisite designs and high-quality craftsmanship. Book a consultation via WhatsApp today.
                 </p>
+                <Button asChild variant="outline" size="lg" className="mt-6 bg-transparent hover:bg-white hover:text-black border-white text-white">
+                  <Link href="/shop">View Collection</Link>
+                </Button>
             </div>
             <div className="flex flex-col items-center gap-4">
               <WhatsappBookingForm />
