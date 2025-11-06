@@ -11,6 +11,7 @@ import type { Product } from '@/lib/data';
 import { ShoppingCart, MessageSquare, CalendarPlus } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface ProductCardProps {
   product: Product;
@@ -18,11 +19,13 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { toast } = useToast();
+  const router = useRouter();
   const productImage = PlaceHolderImages.find(
     (img) => img.id === product.imageId
   );
 
   const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation();
     e.preventDefault();
     toast({
       title: 'Added to Cart!',
@@ -31,12 +34,19 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   const handleWhatsAppInquiry = (e: React.MouseEvent) => {
+    e.stopPropagation();
     e.preventDefault();
     const message = `Hello Shimmer! I have a question about the product: ${product.name}.`;
     const whatsappUrl = `https://api.whatsapp.com/send/?phone=919599695872&text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, '_blank');
+  }
+
+  const handleBookingClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    router.push('/booking');
   }
 
   return (
@@ -59,11 +69,9 @@ export function ProductCard({ product }: ProductCardProps) {
             <Button variant="secondary" size="icon" onClick={handleWhatsAppInquiry} aria-label={`Inquire about ${product.name} on WhatsApp`} className="h-8 w-8 bg-green-500 hover:bg-green-600 text-white">
                 <MessageSquare className="h-4 w-4" />
             </Button>
-            <Link href="/booking" passHref>
-              <Button variant="secondary" size="icon" aria-label={`Book consultation for ${product.name}`} className="h-8 w-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <CalendarPlus className="h-4 w-4" />
-              </Button>
-            </Link>
+            <Button variant="secondary" size="icon" onClick={handleBookingClick} aria-label={`Book consultation for ${product.name}`} className="h-8 w-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <CalendarPlus className="h-4 w-4" />
+            </Button>
            </div>
         </div>
         <CardContent className="p-4">
