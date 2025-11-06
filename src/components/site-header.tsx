@@ -4,21 +4,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Gem, ChevronDown } from 'lucide-react';
+import { Menu, Gem } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/shop', label: 'Collections' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/booking', label: 'Booking' },
 ];
 
 export function SiteHeader() {
@@ -53,16 +49,6 @@ export function SiteHeader() {
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors focus:outline-none">
-              Pages <ChevronDown className='h-4 w-4' />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-background text-foreground">
-              <DropdownMenuItem asChild><Link href="/blog">Blog</Link></DropdownMenuItem>
-              <DropdownMenuItem asChild><Link href="/contact">Contact</Link></DropdownMenuItem>
-              <DropdownMenuItem asChild><Link href="/booking">Booking</Link></DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </nav>
         <div className="flex items-center justify-end space-x-4">
           <div className="md:hidden">
@@ -82,16 +68,6 @@ export function SiteHeader() {
                   {navLinks.map((link) => (
                     <NavLink key={link.href} {...link} className="text-foreground/80 hover:text-primary"/>
                   ))}
-                   <DropdownMenu>
-                    <DropdownMenuTrigger className="flex items-center gap-1 text-lg md:text-sm font-medium text-foreground/80 hover:text-primary transition-colors focus:outline-none">
-                      Pages <ChevronDown className='h-4 w-4' />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-background text-foreground">
-                      <DropdownMenuItem asChild><Link href="/blog">Blog</Link></DropdownMenuItem>
-                      <DropdownMenuItem asChild><Link href="/contact">Contact</Link></DropdownMenuItem>
-                       <DropdownMenuItem asChild><Link href="/booking">Booking</Link></DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
                 </nav>
               </SheetContent>
             </Sheet>
