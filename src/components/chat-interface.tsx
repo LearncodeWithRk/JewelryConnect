@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useFormStatus } from 'react-dom';
+import { useEffect, useRef, useState, useActionState } from 'react';
 import { handleConsultation } from '@/app/booking/actions';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -38,7 +38,7 @@ function SubmitButton() {
 }
 
 export function ChatInterface() {
-  const [state, formAction] = useFormState(handleConsultation, initialState);
+  const [state, formAction] = useActionState(handleConsultation, initialState);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
