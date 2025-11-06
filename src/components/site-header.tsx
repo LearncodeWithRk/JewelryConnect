@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Gem } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -60,6 +60,9 @@ export function SiteHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="bg-background text-foreground">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Main Menu</SheetTitle>
+                </SheetHeader>
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
                   <Gem className="h-6 w-6 text-primary" />
                   <span className="font-bold font-headline text-lg text-foreground">Shimmer</span>
