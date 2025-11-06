@@ -7,7 +7,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { ArrowRight, Star, ShoppingBag, Truck, Package, Award } from 'lucide-react';
+import { ArrowRight, Star, ShoppingBag, Truck, Package, Award, Gem } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
