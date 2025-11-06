@@ -32,8 +32,8 @@ export function SiteHeader() {
         href={href}
         onClick={() => setSheetOpen(false)}
         className={cn(
-          'text-lg md:text-sm font-medium transition-colors hover:text-white',
-          isActive ? 'text-white' : 'text-neutral-300',
+          'text-lg md:text-sm font-medium transition-colors hover:text-primary',
+          isActive ? 'text-primary' : 'text-foreground/80',
           className
         )}
       >
@@ -43,10 +43,10 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="absolute top-0 z-50 w-full">
-      <div className="container flex h-24 items-center justify-between bg-black/20 backdrop-blur-sm rounded-b-lg text-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Gem className="h-8 w-8" />
+          <Gem className="h-8 w-8 text-primary" />
           <span className="font-bold font-headline text-2xl">Shimmer</span>
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
@@ -54,7 +54,7 @@ export function SiteHeader() {
             <NavLink key={link.href} {...link} />
           ))}
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-neutral-300 hover:text-white transition-colors focus:outline-none">
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors focus:outline-none">
               Pages <ChevronDown className='h-4 w-4' />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background text-foreground">
