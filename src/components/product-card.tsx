@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Product } from '@/lib/data';
-import { ShoppingCart, MessageSquare, CalendarPlus } from 'lucide-react';
+import { MessageSquare, CalendarPlus } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -23,15 +23,6 @@ export function ProductCard({ product }: ProductCardProps) {
   const productImage = PlaceHolderImages.find(
     (img) => img.id === product.imageId
   );
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    toast({
-      title: 'Added to Cart!',
-      description: `${product.name} has been added to your cart.`,
-    });
-  };
 
   const handleWhatsAppInquiry = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -63,9 +54,6 @@ export function ProductCard({ product }: ProductCardProps) {
             />
           )}
            <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-            <Button variant="secondary" size="icon" onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="h-8 w-8">
-                <ShoppingCart className="h-4 w-4" />
-            </Button>
             <Button variant="secondary" size="icon" onClick={handleWhatsAppInquiry} aria-label={`Inquire about ${product.name} on WhatsApp`} className="h-8 w-8 bg-green-500 hover:bg-green-600 text-white">
                 <MessageSquare className="h-4 w-4" />
             </Button>
