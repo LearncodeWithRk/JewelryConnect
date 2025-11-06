@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Sparkles, Gem } from 'lucide-react';
 import type { Metadata } from 'next';
-import { BackButton } from '@/components/back-button';
 
 export const metadata: Metadata = {
   title: 'About | JewelryConnect',
@@ -18,7 +17,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <BackButton />
+        
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="order-2 md:order-1">
             <h1 className="font-headline text-5xl md:text-6xl font-bold mb-6">

@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BackButton } from '@/components/back-button';
 
 export const metadata: Metadata = {
   title: 'Contact Us | JewelryConnect',
@@ -38,7 +37,7 @@ export default function ContactPage() {
   return (
     <div className="bg-secondary">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <BackButton />
+        
         <div className="text-center mb-12">
           <h1 className="font-headline text-5xl md:text-6xl font-bold">Get In Touch</h1>
           <p className="mt-2 text-lg text-muted-foreground">
