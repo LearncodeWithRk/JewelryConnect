@@ -17,7 +17,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
-import { CalendarIcon, MessageSquare } from 'lucide-react';
+import { CalendarIcon, MessageSquare, MapPin } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
@@ -26,12 +26,13 @@ export function WhatsappBookingForm() {
   const [name, setName] = useState('');
   const [collection, setCollection] = useState('');
   const [date, setDate] = useState<Date | undefined>(undefined);
+  const [location, setLocation] = useState('');
 
   const handleBooking = (e: React.FormEvent) => {
     e.preventDefault();
 
     const formattedDate = date ? format(date, 'PPP') : 'Not specified';
-    const message = `Hello Shimmer! I'd like to book a consultation.\n\nName: ${name}\nLuxury Collection: ${collection}\nPreferred Date: ${formattedDate}`;
+    const message = `Hello Shimmer! I'd like to book a consultation.\n\nName: ${name}\nLuxury Collection: ${collection}\nPreferred Date: ${formattedDate}\nLocation: ${location}`;
     const whatsappUrl = `https://api.whatsapp.com/send/?phone=919599695872&text=${encodeURIComponent(
       message
     )}`;
@@ -76,6 +77,20 @@ export function WhatsappBookingForm() {
                 <SelectItem value="Full Set">Full Set</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="location">Location</Label>
+            <div className="relative">
+              <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-400" />
+              <Input
+                id="location"
+                placeholder="Enter your city or region"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                required
+                className="bg-white/10 border-neutral-400 focus:ring-primary pl-10"
+              />
+            </div>
           </div>
           <div className="space-y-2">
             <Label htmlFor="booking-date">Booking Date</Label>
