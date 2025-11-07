@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Product } from '@/lib/data';
-import { MessageSquare, CalendarPlus } from 'lucide-react';
+import { MessageSquare, CalendarPlus, Share2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -40,6 +40,15 @@ export function ProductCard({ product }: ProductCardProps) {
     router.push('/booking');
   }
 
+  const handleShareClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const shareText = `Check out this amazing product: ${product.name}!`;
+    const productUrl = window.location.origin + `/shop`;
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${shareText} ${productUrl}`)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
   return (
     <Link href="#" className="group">
       <Card className="overflow-hidden group flex flex-col border-none shadow-none bg-transparent text-center">
@@ -59,6 +68,9 @@ export function ProductCard({ product }: ProductCardProps) {
             </Button>
             <Button variant="secondary" size="icon" onClick={handleBookingClick} aria-label={`Book consultation for ${product.name}`} className="h-8 w-8 bg-primary hover:bg-primary/90 text-primary-foreground">
                 <CalendarPlus className="h-4 w-4" />
+            </Button>
+            <Button variant="secondary" size="icon" onClick={handleShareClick} aria-label={`Share ${product.name} on WhatsApp`} className="h-8 w-8 bg-blue-500 hover:bg-blue-600 text-white">
+                <Share2 className="h-4 w-4" />
             </Button>
            </div>
         </div>
