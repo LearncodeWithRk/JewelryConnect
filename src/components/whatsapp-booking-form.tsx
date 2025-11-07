@@ -32,7 +32,7 @@ export function WhatsappBookingForm() {
     e.preventDefault();
 
     const formattedDate = date ? format(date, 'PPP') : 'Not specified';
-    const message = `Hello Shimmer! I'd like to book a consultation.\n\nName: ${name}\nLuxury Collection: ${collection}\nPreferred Date: ${formattedDate}\nLocation: ${location}`;
+    const message = `Hello Shimmer! I'd like to book a consultation.\n\nName: ${name}\nLuxury Collection: ${collection}\nLocation: ${location}\nPreferred Date: ${formattedDate}`;
     const whatsappUrl = `https://api.whatsapp.com/send/?phone=919599695872&text=${encodeURIComponent(
       message
     )}`;
