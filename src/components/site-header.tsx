@@ -56,6 +56,33 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center justify-end space-x-4">
+          <div className="md:hidden">
+            {isMounted && (
+              <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                  <SheetHeader>
+                    <SheetTitle>
+                        <Link href="/" onClick={() => setSheetOpen(false)} className="flex items-center space-x-2">
+                            <Gem className="h-8 w-8 text-primary" />
+                            <span className="font-bold font-headline text-2xl">Shimmer</span>
+                        </Link>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <nav className="flex flex-col gap-6 pt-8">
+                    {navLinks.map((link) => (
+                      <NavLink key={link.href} {...link} />
+                    ))}
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            )}
+          </div>
         </div>
       </div>
     </header>
